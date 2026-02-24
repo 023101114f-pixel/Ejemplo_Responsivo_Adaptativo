@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Proyecto Financiero',
 
-      // 🌞 TEMA CLARO
+      //  TEMA CLARO
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      // 🌙 TEMA OSCURO
+      //  TEMA OSCURO
       darkTheme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      // 👇 Cambia aquí para probar
+      //  Tema adaptativo según la configuración del sistema
       themeMode: ThemeMode.system, // dark / light / system
 
       home: const DashboardScreen(),
@@ -68,9 +68,9 @@ class DashboardScreen extends StatelessWidget {
   }
 }
 
-////////////////////////////////////////////////////////////
-/// 1️⃣ APP BAR
-////////////////////////////////////////////////////////////
+//------------------------------------------------------------
+/// 1. APP BAR
+//  ------------------------------------------------------------
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -100,9 +100,9 @@ class CustomAppBar extends StatelessWidget {
   }
 }
 
-////////////////////////////////////////////////////////////
-/// 2️⃣ BALANCE CARD
-////////////////////////////////////////////////////////////
+//------------------------------------------------------------>
+/// 2️. BALANCE CARD
+//------------------------------------------------------------
 
 class BalanceCard extends StatelessWidget {
   const BalanceCard({super.key});
@@ -151,9 +151,9 @@ class BalanceCard extends StatelessWidget {
   }
 }
 
-////////////////////////////////////////////////////////////
-/// 3️⃣ QUICK ACTIONS
-////////////////////////////////////////////////////////////
+//------------------------------------------------------------
+/// 3️. QUICK ACTIONS
+//------------------------------------------------------------
 
 class QuickActions extends StatelessWidget {
   const QuickActions({super.key});
@@ -206,9 +206,9 @@ class ActionButton extends StatelessWidget {
   }
 }
 
-////////////////////////////////////////////////////////////
-/// 4️⃣ TRANSACTIONS
-////////////////////////////////////////////////////////////
+//------------------------------------------------------------>
+/// 4. TRANSACTIONS
+//-------------------------------------------------------------
 
 class TransactionsList extends StatelessWidget {
   const TransactionsList({super.key});
@@ -291,9 +291,7 @@ class TransactionItem extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16,
-              color: isExpense
-                  ? colors.error
-                  : Colors.green, // puedes personalizar esto
+              color: isExpense ? colors.error : Colors.green,
             ),
           ),
         ],
